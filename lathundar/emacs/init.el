@@ -70,8 +70,13 @@
 ;; Show line numbers to the left of the buffer (2013-08-20)
 ; (linum-mode t)
 
+;; Sentences are not followed by two spaces (2014-08-26)
+;; Makes navigating with M-e and M-a (forward/backward senctence)
+;; behave like you would expect
+(setq sentence-end-double-space nil)
+
 ;; C-SPC after C-u C-SPC cycles mark stack (2013-08-20)
-(setq-default set-mark-command-repeat-pop t) 
+(setq-default set-mark-command-repeat-pop t)
 
 ;; Save-place (2013-08-20)
 ;; Remember the cursor position when you close a file, so that you
