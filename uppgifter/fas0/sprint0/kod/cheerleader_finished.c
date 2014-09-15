@@ -5,7 +5,7 @@
 void cheer(char name[]){
   int len = strlen(name);
   char newName[len + 1];
-  strncpy(newName, name, len);
+  strncpy(newName, name, len + 1);
   for(int i = 0; newName[i] != '\0'; ++i){
     char letter = newName[i];
     printf("Ge mig ett '%c'!\n", tolower(letter));

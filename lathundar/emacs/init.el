@@ -67,8 +67,8 @@
 ;; Show parenthesis matching the one below the cursor (2013-08-20)
 (show-paren-mode t)
 
-;; Show line numbers to the left of the buffer (2013-08-20)
-; (linum-mode t)
+;; Show line numbers to the left of all buffers (2014-09-09)
+; (global-linum-mode t)
 
 ;; Sentences are not followed by two spaces (2014-08-26)
 ;; Makes navigating with M-e and M-a (forward/backward senctence)
