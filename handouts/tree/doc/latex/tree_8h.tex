@@ -1,0 +1,406 @@
+\hypertarget{tree_8h}{\section{tree/tree.h filreferens}
+\label{tree_8h}\index{tree/tree.\+h@{tree/tree.\+h}}
+}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+Include-\/beroendediagram för tree.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{tree_8h__incl}
+\end{center}
+\end{figure}
+Den här grafen visar vilka filer som direkt eller indirekt inkluderar denna filen.
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typdefinitioner}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtree}{tree} \hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Trädet. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{tree_8h_ac9404bce0090a72ec95c26c1fc58e4dd}{cmp\+\_\+f} )(void $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em En jämförelsefunktion som används av trädet för att jämföra element. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{tree_8h_a9e54f1284e25a3766511292f740cfdf6}{apply\+\_\+f} )(void $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em Signaturen för funktioner som skickas som argument till tree\+\_\+traversal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Egenuppräknande typer}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order} \{ \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759a689aa9fa926510a42fc190e81c65e794}{I\+N\+\_\+\+O\+R\+D\+E\+R}, 
+\hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759a165bf1eccc05929bf679fe6635bc1f2f}{P\+R\+E\+\_\+\+O\+R\+D\+E\+R}, 
+\hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759adb0b29d4ea7b25dfccdef57ec4275e91}{P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R}
+ \}
+\begin{DoxyCompactList}\small\item\em Specificerar en traverseringordning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funktioner}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$ \hyperlink{tree_8h_ac8974d0f4d710bd6df10d8e38fa0d243}{tree\+\_\+new} (\hyperlink{tree_8h_ac9404bce0090a72ec95c26c1fc58e4dd}{cmp\+\_\+f} key\+\_\+compare\+\_\+function, bool auto\+\_\+balance)
+\item 
+void \hyperlink{tree_8h_a7ab993db42bc345a1c64e50ba94a8073}{tree\+\_\+delete} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree})
+\item 
+void \hyperlink{tree_8h_abc16c36d24d481047dcb82b7cfd6a3a2}{tree\+\_\+insert} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, void $\ast$key, void $\ast$value)
+\item 
+void \hyperlink{tree_8h_adc1ae204ca89e92d85d8b05878708e72}{tree\+\_\+traversal} (enum \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order} \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order}, \hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, \hyperlink{tree_8h_a9e54f1284e25a3766511292f740cfdf6}{apply\+\_\+f} operation, void $\ast$fst\+\_\+arg)
+\item 
+uint32\+\_\+t \hyperlink{tree_8h_a41f3b7564a5da77967a40e2f484e73a8}{tree\+\_\+depth} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree})
+\item 
+uint32\+\_\+t \hyperlink{tree_8h_a1c9d41a0f10a772536b25cbf7b992c7a}{tree\+\_\+size} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree})
+\item 
+void $\ast$ \hyperlink{tree_8h_a04460bd7f2b87e31e348d2edb8e319ad}{tree\+\_\+get} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, void $\ast$key)
+\item 
+void $\ast$ \hyperlink{tree_8h_a514ba09f4354c73460494f050e2486cd}{tree\+\_\+remove} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, void $\ast$key)
+\item 
+char $\ast$ \hyperlink{tree_8h_a369c98a5f5d270aec0725a3367a6122b}{tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, void $\ast$key)
+\item 
+void $\ast$ \hyperlink{tree_8h_a52252cb35bca876e9e88c10771f72214}{tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path} (\hyperlink{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{tree\+\_\+s} $\ast$\hyperlink{structtree}{tree}, char $\ast$path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation över typdefinitioner}
+\hypertarget{tree_8h_a9e54f1284e25a3766511292f740cfdf6}{\index{tree.\+h@{tree.\+h}!apply\+\_\+f@{apply\+\_\+f}}
+\index{apply\+\_\+f@{apply\+\_\+f}!tree.\+h@{tree.\+h}}
+\subsubsection[{apply\+\_\+f}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ apply\+\_\+f)(void $\ast$, void $\ast$)}}\label{tree_8h_a9e54f1284e25a3766511292f740cfdf6}
+
+
+Signaturen för funktioner som skickas som argument till tree\+\_\+traversal. 
+
+\begin{DoxySeeAlso}{Se även}
+\hyperlink{tree_8h_adc1ae204ca89e92d85d8b05878708e72}{tree\+\_\+traversal} 
+\end{DoxySeeAlso}
+\hypertarget{tree_8h_ac9404bce0090a72ec95c26c1fc58e4dd}{\index{tree.\+h@{tree.\+h}!cmp\+\_\+f@{cmp\+\_\+f}}
+\index{cmp\+\_\+f@{cmp\+\_\+f}!tree.\+h@{tree.\+h}}
+\subsubsection[{cmp\+\_\+f}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ cmp\+\_\+f)(void $\ast$, void $\ast$)}}\label{tree_8h_ac9404bce0090a72ec95c26c1fc58e4dd}
+
+
+En jämförelsefunktion som används av trädet för att jämföra element. 
+
+\hypertarget{tree_8h_a563df572fa7aabc17e5f9981cd99460b}{\index{tree.\+h@{tree.\+h}!tree\+\_\+s@{tree\+\_\+s}}
+\index{tree\+\_\+s@{tree\+\_\+s}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tree} {\bf tree\+\_\+s}}}\label{tree_8h_a563df572fa7aabc17e5f9981cd99460b}
+
+
+Trädet. 
+
+
+
+\subsection{Dokumentation över egenuppräknande typer}
+\hypertarget{tree_8h_a9f4e8630516f3da89537313b4c828759}{\index{tree.\+h@{tree.\+h}!order@{order}}
+\index{order@{order}!tree.\+h@{tree.\+h}}
+\subsubsection[{order}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf order}}}\label{tree_8h_a9f4e8630516f3da89537313b4c828759}
+
+
+Specificerar en traverseringordning. 
+
+\begin{DoxySeeAlso}{Se även}
+\hyperlink{tree_8h_adc1ae204ca89e92d85d8b05878708e72}{tree\+\_\+traversal} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Egenuppräknade typers värden]\par
+\begin{description}
+\index{I\+N\+\_\+\+O\+R\+D\+E\+R@{I\+N\+\_\+\+O\+R\+D\+E\+R}!tree.\+h@{tree.\+h}}\index{tree.\+h@{tree.\+h}!I\+N\+\_\+\+O\+R\+D\+E\+R@{I\+N\+\_\+\+O\+R\+D\+E\+R}}\item[{\em 
+\hypertarget{tree_8h_a9f4e8630516f3da89537313b4c828759a689aa9fa926510a42fc190e81c65e794}{I\+N\+\_\+\+O\+R\+D\+E\+R}\label{tree_8h_a9f4e8630516f3da89537313b4c828759a689aa9fa926510a42fc190e81c65e794}
+}]\index{P\+R\+E\+\_\+\+O\+R\+D\+E\+R@{P\+R\+E\+\_\+\+O\+R\+D\+E\+R}!tree.\+h@{tree.\+h}}\index{tree.\+h@{tree.\+h}!P\+R\+E\+\_\+\+O\+R\+D\+E\+R@{P\+R\+E\+\_\+\+O\+R\+D\+E\+R}}\item[{\em 
+\hypertarget{tree_8h_a9f4e8630516f3da89537313b4c828759a165bf1eccc05929bf679fe6635bc1f2f}{P\+R\+E\+\_\+\+O\+R\+D\+E\+R}\label{tree_8h_a9f4e8630516f3da89537313b4c828759a165bf1eccc05929bf679fe6635bc1f2f}
+}]\index{P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R@{P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R}!tree.\+h@{tree.\+h}}\index{tree.\+h@{tree.\+h}!P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R@{P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R}}\item[{\em 
+\hypertarget{tree_8h_a9f4e8630516f3da89537313b4c828759adb0b29d4ea7b25dfccdef57ec4275e91}{P\+O\+S\+T\+\_\+\+O\+R\+D\+E\+R}\label{tree_8h_a9f4e8630516f3da89537313b4c828759adb0b29d4ea7b25dfccdef57ec4275e91}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Dokumentation över funktioner}
+\hypertarget{tree_8h_a7ab993db42bc345a1c64e50ba94a8073}{\index{tree.\+h@{tree.\+h}!tree\+\_\+delete@{tree\+\_\+delete}}
+\index{tree\+\_\+delete@{tree\+\_\+delete}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a7ab993db42bc345a1c64e50ba94a8073}
+Ta bort trädet ur minnes.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet\\
+\hline
+\end{DoxyParams}
+Sorteringsnycklar och element tas inte bort ur minnet. 
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{tree_8h_a7ab993db42bc345a1c64e50ba94a8073_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_a41f3b7564a5da77967a40e2f484e73a8}{\index{tree.\+h@{tree.\+h}!tree\+\_\+depth@{tree\+\_\+depth}}
+\index{tree\+\_\+depth@{tree\+\_\+depth}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+depth}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t tree\+\_\+depth (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a41f3b7564a5da77967a40e2f484e73a8}
+Returnerar djupet i trädet.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+tree\+:s djup 
+\end{DoxyReturn}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{tree_8h_a41f3b7564a5da77967a40e2f484e73a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{tree_8h_a41f3b7564a5da77967a40e2f484e73a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_a04460bd7f2b87e31e348d2edb8e319ad}{\index{tree.\+h@{tree.\+h}!tree\+\_\+get@{tree\+\_\+get}}
+\index{tree\+\_\+get@{tree\+\_\+get}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ tree\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{void $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a04460bd7f2b87e31e348d2edb8e319ad}
+Returnerar en pekare till ett element i trädet.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+{\em key} & sorteringsnyckeln för det sökta elementet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+det matchande elementet från trädet 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a52252cb35bca876e9e88c10771f72214}{\index{tree.\+h@{tree.\+h}!tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path@{tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path}}
+\index{tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path@{tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ tree\+\_\+get\+\_\+element\+\_\+for\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a52252cb35bca876e9e88c10771f72214}
+Tar en sträng med samma format som returneras från tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element och returnerar elementet på den platsen i trädet.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+{\em path} & pathen till elementet som skall returneras \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+en pekare till ett element eller N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a369c98a5f5d270aec0725a3367a6122b}{\index{tree.\+h@{tree.\+h}!tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element@{tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element}}
+\index{tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element@{tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ tree\+\_\+get\+\_\+path\+\_\+for\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{void $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a369c98a5f5d270aec0725a3367a6122b}
+Returnerar en path till ett element i trädet.
+
+En path kan vara t.\+ex. \char`\"{}\char`\"{} för roten, \char`\"{}\+L\+L\char`\"{} för två steg vänster, \char`\"{}\+L\+R\char`\"{} för vänster-\/höger etc.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+{\em key} & sorteringsnyckeln för det sökta elementet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+pathen till el, ev N\+U\+L\+L om el inte finns i trädet 
+\end{DoxyReturn}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8h_a369c98a5f5d270aec0725a3367a6122b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_abc16c36d24d481047dcb82b7cfd6a3a2}{\index{tree.\+h@{tree.\+h}!tree\+\_\+insert@{tree\+\_\+insert}}
+\index{tree\+\_\+insert@{tree\+\_\+insert}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+insert}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{void $\ast$}]{key, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_abc16c36d24d481047dcb82b7cfd6a3a2}
+Stoppar in ett element i trädet.
+
+O\+B\+S! Implementationen förutsätter att alla nycklar är unika vid insättning!
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+{\em key} & sorteringsnyckeln för elementet \\
+\hline
+{\em value} & elementet som skall stoppas in \\
+\hline
+\end{DoxyParams}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8h_abc16c36d24d481047dcb82b7cfd6a3a2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_ac8974d0f4d710bd6df10d8e38fa0d243}{\index{tree.\+h@{tree.\+h}!tree\+\_\+new@{tree\+\_\+new}}
+\index{tree\+\_\+new@{tree\+\_\+new}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree\+\_\+s}$\ast$ tree\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf cmp\+\_\+f}}]{key\+\_\+compare\+\_\+function, }
+\item[{bool}]{auto\+\_\+balance}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_ac8974d0f4d710bd6df10d8e38fa0d243}
+Skapa ett nytt träd.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em key\+\_\+compare\+\_\+function} & pekar ut den jämförelsefunktion som skall användas för att jämföra elementen i trädet \\
+\hline
+{\em auto\+\_\+balance} & är true om trädet skall balansera sig automatiskt vid insättning och borttagning\\
+\hline
+\end{DoxyParams}
+Jämförelsefunktionen skall fungera som strcmp map returvärden. \hypertarget{tree_8h_a514ba09f4354c73460494f050e2486cd}{\index{tree.\+h@{tree.\+h}!tree\+\_\+remove@{tree\+\_\+remove}}
+\index{tree\+\_\+remove@{tree\+\_\+remove}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ tree\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{void $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a514ba09f4354c73460494f050e2486cd}
+Tar bort ett element ur trädet.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+{\em key} & sorteringsnyckeln för det sökta elementet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+en pekare till elementet eller N\+U\+L\+L om det inte fanns i trädet 
+\end{DoxyReturn}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8h_a514ba09f4354c73460494f050e2486cd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_a1c9d41a0f10a772536b25cbf7b992c7a}{\index{tree.\+h@{tree.\+h}!tree\+\_\+size@{tree\+\_\+size}}
+\index{tree\+\_\+size@{tree\+\_\+size}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t tree\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_a1c9d41a0f10a772536b25cbf7b992c7a}
+Returnerar trädets storlek (antalet noder).
+
+
+\begin{DoxyParams}{Parametrar}
+{\em tree} & trädet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+tree\+:s storlek (antalet noder) 
+\end{DoxyReturn}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{tree_8h_a1c9d41a0f10a772536b25cbf7b992c7a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tree_8h_adc1ae204ca89e92d85d8b05878708e72}{\index{tree.\+h@{tree.\+h}!tree\+\_\+traversal@{tree\+\_\+traversal}}
+\index{tree\+\_\+traversal@{tree\+\_\+traversal}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+traversal}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+traversal (
+\begin{DoxyParamCaption}
+\item[{enum {\bf order}}]{order, }
+\item[{{\bf tree\+\_\+s} $\ast$}]{tree, }
+\item[{{\bf apply\+\_\+f}}]{operation, }
+\item[{void $\ast$}]{fst\+\_\+arg}
+\end{DoxyParamCaption}
+)}}\label{tree_8h_adc1ae204ca89e92d85d8b05878708e72}
+Traverserar trädet i angiven ordningsföljd och utför en operation på varje element. \begin{DoxySeeAlso}{Se även}
+enum \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order} 
+
+\hyperlink{tree_8h_a9e54f1284e25a3766511292f740cfdf6}{apply\+\_\+f}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parametrar}
+{\em order} & traverseringsordningen \\
+\hline
+{\em tree} & trädet \\
+\hline
+{\em operation} & operationen som skall utföras på varje element \\
+\hline
+{\em argument} & till varje operation (skickas som första argument till apply\+\_\+f-\/funktionen om != N\+U\+L\+L) \\
+\hline
+\end{DoxyParams}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{tree_8h_adc1ae204ca89e92d85d8b05878708e72_cgraph}
+\end{center}
+\end{figure}
+
+

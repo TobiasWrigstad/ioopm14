@@ -1,0 +1,11 @@
+<map id="tree_insert" name="tree_insert">
+<area shape="rect" id="node2" href="$node_8c.html#a51b804eb853b5938a60dbe0df42b474a" title="node_new" alt="" coords="295,5,378,31"/>
+<area shape="rect" id="node3" href="$node_8c.html#a9b008ff5bff9290e7d12f61ee6fe0306" title="Stoppar in ett nytt element i trädet. " alt="" coords="138,56,229,81"/>
+<area shape="rect" id="node4" href="$node_8h.html#a3934222d89b56dbe6612d3128f9fe4da" title="Returnerar subträdets djup. " alt="" coords="603,81,695,107"/>
+<area shape="rect" id="node5" href="$balance_8c.html#a2689da611315fb6d26133997568c32e3" title="balance_subtree" alt="" coords="277,180,397,205"/>
+<area shape="rect" id="node6" href="$balance_8c.html#adf0f756ba133afb0ede202ea2d39385e" title="Kontrollerar hur välbalanserat ett subträd är. " alt="" coords="445,107,555,132"/>
+<area shape="rect" id="node7" href="$balance_8c.html#a499050d5573d5070a0973a56dac79315" title="rotate_left" alt="" coords="459,156,540,181"/>
+<area shape="rect" id="node8" href="$balance_8c.html#a536da07b68b69d0131501f54ec2def6a" title="flip_left" alt="" coords="468,205,532,231"/>
+<area shape="rect" id="node9" href="$balance_8c.html#a55c8417a5335da0856e7f5b1feaa636f" title="rotate_right" alt="" coords="455,255,544,280"/>
+<area shape="rect" id="node10" href="$balance_8c.html#a6361650730a57c352dd71a4ba360fd87" title="flip_right" alt="" coords="464,304,536,329"/>
+</map>

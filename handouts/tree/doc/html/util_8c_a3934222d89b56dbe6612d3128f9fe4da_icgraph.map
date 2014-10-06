@@ -1,0 +1,9 @@
+<map id="node_depth" name="node_depth">
+<area shape="rect" id="node2" href="$balance_8h.html#adf0f756ba133afb0ede202ea2d39385e" title="Kontrollerar hur välbalanserat ett subträd är. " alt="" coords="145,5,255,31"/>
+<area shape="rect" id="node4" href="$node_8h.html#a9b008ff5bff9290e7d12f61ee6fe0306" title="Stoppar in ett nytt element i trädet. " alt="" coords="533,31,624,56"/>
+<area shape="rect" id="node6" href="$tree_8h.html#a41f3b7564a5da77967a40e2f484e73a8" title="tree_depth" alt="" coords="158,107,243,132"/>
+<area shape="rect" id="node8" href="$util_8h.html#a3934222d89b56dbe6612d3128f9fe4da" title="Returnerar subträdets djup. " alt="" coords="154,180,246,205"/>
+<area shape="rect" id="node3" href="$balance_8c.html#a2689da611315fb6d26133997568c32e3" title="balance_subtree" alt="" coords="334,5,454,31"/>
+<area shape="rect" id="node5" href="$tree_8h.html#abc16c36d24d481047dcb82b7cfd6a3a2" title="tree_insert" alt="" coords="672,31,756,56"/>
+<area shape="rect" id="node7" href="$tree_8h.html#a369c98a5f5d270aec0725a3367a6122b" title="tree_get_path_for_element" alt="" coords="303,107,485,132"/>
+</map>
