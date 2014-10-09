@@ -1,5 +1,5 @@
 #include <string.h>
-#include "CUnit/Basic.h"
+#include <CUnit/Basic.h>
 #include "istring.h"
 #include "istring_rep.h"
 #include <stdlib.h>
