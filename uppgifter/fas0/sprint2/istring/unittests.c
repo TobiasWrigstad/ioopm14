@@ -88,7 +88,7 @@ void testISTRCHR(void)
   CU_ASSERT(istrchr(str, 'b') == str + 10);
   CU_ASSERT(istrchr(str, 'c') == str + 12);
   CU_ASSERT(istrchr(str, 's') == str);
-  CU_ASSERT(istrrchr(str, '\0') == str + 20);
+  CU_ASSERT(istrchr(str, '\0') == str + 20);
   CU_ASSERT(istrchr(str, 'x') == NULL);
   istring_rm(str);
 }
