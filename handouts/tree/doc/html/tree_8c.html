@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Livekodning 2014-10-09 IOOPM: tree/tree.c filreferens</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Livekodning 2014-10-09 IOOPM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Skapad av Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Sök');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Huvudsida</span></a></li>
+      <li><a href="annotated.html"><span>Datastrukturer</span></a></li>
+      <li class="current"><a href="files.html"><span>Filer</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Sök" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fillista</span></a></li>
+      <li><a href="globals.html"><span>Globala&#160;symboler</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('tree_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alla</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Datastrukturer</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Filer</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktioner</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabler</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitioner</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Egenuppräknande typer</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Egenuppräknade typers värden</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definitioner</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Datastrukturer</a> &#124;
+<a href="#define-members">Definitioner</a> &#124;
+<a href="#func-members">Funktioner</a>  </div>
+  <div class="headertitle">
+<div class="title">tree.c filreferens</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="tree_8h_source.html">tree.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="node_8h_source.html">node.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-beroendediagram för tree.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c__incl.png" border="0" usemap="#tree_2tree_8c" alt=""/></div>
+<map name="tree_2tree_8c" id="tree_2tree_8c">
+<area shape="rect" id="node4" href="tree_8h.html" title="tree.h" alt="" coords="172,225,228,251"/><area shape="rect" id="node7" href="node_8h.html" title="node.h" alt="" coords="237,152,299,177"/><area shape="rect" id="node8" href="util_8h.html" title="util.h" alt="" coords="288,79,338,104"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Datastrukturer</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtree.html">tree</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definitioner</h2></td></tr>
+<tr class="memitem:aace936c30e3b97b67d64c80c2e7dbc4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#aace936c30e3b97b67d64c80c2e7dbc4c">No_left_subtree</a>(n)&#160;&#160;&#160;((n)-&gt;left == NULL)</td></tr>
+<tr class="separator:aace936c30e3b97b67d64c80c2e7dbc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a57256803646ba09d50c898cefb82b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#ab0a57256803646ba09d50c898cefb82b">No_right_subtree</a>(n)&#160;&#160;&#160;((n)-&gt;right == NULL)</td></tr>
+<tr class="separator:ab0a57256803646ba09d50c898cefb82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ce371d9c132b3e5b9e389fc18fcbce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a71ce371d9c132b3e5b9e389fc18fcbce">Is_leaf</a>(n)&#160;&#160;&#160;(<a class="el" href="tree_8c.html#ab0a57256803646ba09d50c898cefb82b">No_right_subtree</a>(n) &amp;&amp; <a class="el" href="tree_8c.html#aace936c30e3b97b67d64c80c2e7dbc4c">No_left_subtree</a>(n))</td></tr>
+<tr class="separator:a71ce371d9c132b3e5b9e389fc18fcbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktioner</h2></td></tr>
+<tr class="memitem:ae7f8766a04f543e0208390c5a8981c27"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#ae7f8766a04f543e0208390c5a8981c27">tree_get</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, void *k)</td></tr>
+<tr class="separator:ae7f8766a04f543e0208390c5a8981c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8936e5b6a90176fd35f7999a1820b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a5d8936e5b6a90176fd35f7999a1820b8">tree_traversal</a> (enum <a class="el" href="tree_8h.html#a9f4e8630516f3da89537313b4c828759">order</a> <a class="el" href="tree_8h.html#a9f4e8630516f3da89537313b4c828759">order</a>, <a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, <a class="el" href="tree_8h.html#a9e54f1284e25a3766511292f740cfdf6">apply_f</a> f, void *fst_arg)</td></tr>
+<tr class="separator:a5d8936e5b6a90176fd35f7999a1820b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3797e9d77dd03723b9f79708b93ba3bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a3797e9d77dd03723b9f79708b93ba3bf">tree_new</a> (<a class="el" href="tree_8h.html#ac9404bce0090a72ec95c26c1fc58e4dd">cmp_f</a> f, bool b)</td></tr>
+<tr class="separator:a3797e9d77dd03723b9f79708b93ba3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1cdce17a27cbc4d82e48656190ffe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a6f1cdce17a27cbc4d82e48656190ffe3">tree_delete</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t)</td></tr>
+<tr class="separator:a6f1cdce17a27cbc4d82e48656190ffe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d042ef97247fae341fc3205a5cdec79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a4d042ef97247fae341fc3205a5cdec79">tree_insert</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, void *k, void *v)</td></tr>
+<tr class="separator:a4d042ef97247fae341fc3205a5cdec79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c4190c6bb6612b52790ca73ceee500"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a31c4190c6bb6612b52790ca73ceee500">tree_remove</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, void *k)</td></tr>
+<tr class="separator:a31c4190c6bb6612b52790ca73ceee500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1dc22883d9d3d466cf0e917ad793af"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#a6d1dc22883d9d3d466cf0e917ad793af">tree_get_element_for_path</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, char *path)</td></tr>
+<tr class="separator:a6d1dc22883d9d3d466cf0e917ad793af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94f77e669d14b11052ba0fcf2339371"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#ac94f77e669d14b11052ba0fcf2339371">tree_get_path_for_element</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t, void *k)</td></tr>
+<tr class="separator:ac94f77e669d14b11052ba0fcf2339371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab29a3b7476b666ac81872398b2a91e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#aaab29a3b7476b666ac81872398b2a91e">tree_depth</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t)</td></tr>
+<tr class="separator:aaab29a3b7476b666ac81872398b2a91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd772c62da9bafb66ac5513ee870735"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree_8c.html#abbd772c62da9bafb66ac5513ee870735">tree_size</a> (<a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *t)</td></tr>
+<tr class="separator:abbd772c62da9bafb66ac5513ee870735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation över definitioner</h2>
+<a class="anchor" id="a71ce371d9c132b3e5b9e389fc18fcbce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Is_leaf</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="tree_8c.html#ab0a57256803646ba09d50c898cefb82b">No_right_subtree</a>(n) &amp;&amp; <a class="el" href="tree_8c.html#aace936c30e3b97b67d64c80c2e7dbc4c">No_left_subtree</a>(n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aace936c30e3b97b67d64c80c2e7dbc4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define No_left_subtree</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((n)-&gt;left == NULL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0a57256803646ba09d50c898cefb82b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define No_right_subtree</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((n)-&gt;right == NULL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation över funktioner</h2>
+<a class="anchor" id="a6f1cdce17a27cbc4d82e48656190ffe3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tree_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ta bort trädet ur minnes.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sorteringsnycklar och element tas inte bort ur minnet. </p>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_a6f1cdce17a27cbc4d82e48656190ffe3_cgraph.png" border="0" usemap="#tree_8c_a6f1cdce17a27cbc4d82e48656190ffe3_cgraph" alt=""/></div>
+<map name="tree_8c_a6f1cdce17a27cbc4d82e48656190ffe3_cgraph" id="tree_8c_a6f1cdce17a27cbc4d82e48656190ffe3_cgraph">
+<area shape="rect" id="node2" href="node_8c.html#a54482a8cdcd1d716d098fb8e759e5a56" title="Traverserar subträdet. " alt="" coords="141,29,251,55"/><area shape="rect" id="node3" href="node_8c.html#ae1d068c29b1634d5d867c9837fc666d5" title="Tar bort en nod ur minnet och returnerar en pekare till dess element. " alt="" coords="149,79,244,104"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaab29a3b7476b666ac81872398b2a91e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t tree_depth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returnerar djupet i trädet.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>tree:s djup </dd></dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_aaab29a3b7476b666ac81872398b2a91e_cgraph.png" border="0" usemap="#tree_8c_aaab29a3b7476b666ac81872398b2a91e_cgraph" alt=""/></div>
+<map name="tree_8c_aaab29a3b7476b666ac81872398b2a91e_cgraph" id="tree_8c_aaab29a3b7476b666ac81872398b2a91e_cgraph">
+<area shape="rect" id="node2" href="node_8h.html#a3934222d89b56dbe6612d3128f9fe4da" title="Returnerar subträdets djup. " alt="" coords="138,5,230,31"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Här är katalog-grafen för denna funktion:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_aaab29a3b7476b666ac81872398b2a91e_icgraph.png" border="0" usemap="#tree_8c_aaab29a3b7476b666ac81872398b2a91e_icgraph" alt=""/></div>
+<map name="tree_8c_aaab29a3b7476b666ac81872398b2a91e_icgraph" id="tree_8c_aaab29a3b7476b666ac81872398b2a91e_icgraph">
+<area shape="rect" id="node2" href="tree_8h.html#a369c98a5f5d270aec0725a3367a6122b" title="tree_get_path_for_element" alt="" coords="138,5,320,31"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7f8766a04f543e0208390c5a8981c27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* tree_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returnerar en pekare till ett element i trädet.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">key</td><td>sorteringsnyckeln för det sökta elementet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>det matchande elementet från trädet </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d1dc22883d9d3d466cf0e917ad793af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* tree_get_element_for_path </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tar en sträng med samma format som returneras från tree_get_path_for_element och returnerar elementet på den platsen i trädet.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">path</td><td>pathen till elementet som skall returneras </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>en pekare till ett element eller NULL </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac94f77e669d14b11052ba0fcf2339371"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* tree_get_path_for_element </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returnerar en path till ett element i trädet.</p>
+<p>En path kan vara t.ex. "" för roten, "LL" för två steg vänster, "LR" för vänster-höger etc.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">key</td><td>sorteringsnyckeln för det sökta elementet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>pathen till el, ev NULL om el inte finns i trädet </dd></dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_ac94f77e669d14b11052ba0fcf2339371_cgraph.png" border="0" usemap="#tree_8c_ac94f77e669d14b11052ba0fcf2339371_cgraph" alt=""/></div>
+<map name="tree_8c_ac94f77e669d14b11052ba0fcf2339371_cgraph" id="tree_8c_ac94f77e669d14b11052ba0fcf2339371_cgraph">
+<area shape="rect" id="node2" href="tree_8c.html#aaab29a3b7476b666ac81872398b2a91e" title="tree_depth" alt="" coords="235,5,320,31"/><area shape="rect" id="node3" href="node_8h.html#a3934222d89b56dbe6612d3128f9fe4da" title="Returnerar subträdets djup. " alt="" coords="368,5,460,31"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d042ef97247fae341fc3205a5cdec79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tree_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stoppar in ett element i trädet.</p>
+<p>OBS! Implementationen förutsätter att alla nycklar är unika vid insättning!</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">key</td><td>sorteringsnyckeln för elementet </td></tr>
+    <tr><td class="paramname">value</td><td>elementet som skall stoppas in </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_a4d042ef97247fae341fc3205a5cdec79_cgraph.png" border="0" usemap="#tree_8c_a4d042ef97247fae341fc3205a5cdec79_cgraph" alt=""/></div>
+<map name="tree_8c_a4d042ef97247fae341fc3205a5cdec79_cgraph" id="tree_8c_a4d042ef97247fae341fc3205a5cdec79_cgraph">
+<area shape="rect" id="node2" href="node_8c.html#a51b804eb853b5938a60dbe0df42b474a" title="node_new" alt="" coords="295,5,378,31"/><area shape="rect" id="node3" href="node_8c.html#a9b008ff5bff9290e7d12f61ee6fe0306" title="Stoppar in ett nytt element i trädet. " alt="" coords="138,56,229,81"/><area shape="rect" id="node4" href="node_8h.html#a3934222d89b56dbe6612d3128f9fe4da" title="Returnerar subträdets djup. " alt="" coords="603,81,695,107"/><area shape="rect" id="node5" href="balance_8c.html#a2689da611315fb6d26133997568c32e3" title="balance_subtree" alt="" coords="277,180,397,205"/><area shape="rect" id="node6" href="balance_8c.html#adf0f756ba133afb0ede202ea2d39385e" title="Kontrollerar hur välbalanserat ett subträd är. " alt="" coords="445,107,555,132"/><area shape="rect" id="node7" href="balance_8c.html#a499050d5573d5070a0973a56dac79315" title="rotate_left" alt="" coords="459,156,540,181"/><area shape="rect" id="node8" href="balance_8c.html#a536da07b68b69d0131501f54ec2def6a" title="flip_left" alt="" coords="468,205,532,231"/><area shape="rect" id="node9" href="balance_8c.html#a55c8417a5335da0856e7f5b1feaa636f" title="rotate_right" alt="" coords="455,255,544,280"/><area shape="rect" id="node10" href="balance_8c.html#a6361650730a57c352dd71a4ba360fd87" title="flip_right" alt="" coords="464,304,536,329"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3797e9d77dd03723b9f79708b93ba3bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a>* tree_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#ac9404bce0090a72ec95c26c1fc58e4dd">cmp_f</a>&#160;</td>
+          <td class="paramname"><em>key_compare_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>auto_balance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Skapa ett nytt träd.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key_compare_function</td><td>pekar ut den jämförelsefunktion som skall användas för att jämföra elementen i trädet </td></tr>
+    <tr><td class="paramname">auto_balance</td><td>är true om trädet skall balansera sig automatiskt vid insättning och borttagning</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Jämförelsefunktionen skall fungera som strcmp map returvärden. </p>
+
+</div>
+</div>
+<a class="anchor" id="a31c4190c6bb6612b52790ca73ceee500"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* tree_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tar bort ett element ur trädet.</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">key</td><td>sorteringsnyckeln för det sökta elementet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>en pekare till elementet eller NULL om det inte fanns i trädet </dd></dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_a31c4190c6bb6612b52790ca73ceee500_cgraph.png" border="0" usemap="#tree_8c_a31c4190c6bb6612b52790ca73ceee500_cgraph" alt=""/></div>
+<map name="tree_8c_a31c4190c6bb6612b52790ca73ceee500_cgraph" id="tree_8c_a31c4190c6bb6612b52790ca73ceee500_cgraph">
+<area shape="rect" id="node2" href="node_8c.html#a2d121428f77a50dbda46a08eeec930fd" title="unlink_smallest" alt="" coords="150,5,262,31"/><area shape="rect" id="node3" href="node_8c.html#ae1d068c29b1634d5d867c9837fc666d5" title="Tar bort en nod ur minnet och returnerar en pekare till dess element. " alt="" coords="310,5,405,31"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abbd772c62da9bafb66ac5513ee870735"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t tree_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returnerar trädets storlek (antalet noder).</p>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returnerar</dt><dd>tree:s storlek (antalet noder) </dd></dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_abbd772c62da9bafb66ac5513ee870735_cgraph.png" border="0" usemap="#tree_8c_abbd772c62da9bafb66ac5513ee870735_cgraph" alt=""/></div>
+<map name="tree_8c_abbd772c62da9bafb66ac5513ee870735_cgraph" id="tree_8c_abbd772c62da9bafb66ac5513ee870735_cgraph">
+<area shape="rect" id="node2" href="node_8h.html#ac334fa878f7aa93d140875390c4eed10" title="Returnerar subträdets storlek. " alt="" coords="129,5,211,31"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d8936e5b6a90176fd35f7999a1820b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tree_traversal </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="tree_8h.html#a9f4e8630516f3da89537313b4c828759">order</a>&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a563df572fa7aabc17e5f9981cd99460b">tree_s</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tree_8h.html#a9e54f1284e25a3766511292f740cfdf6">apply_f</a>&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>fst_arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Traverserar trädet i angiven ordningsföljd och utför en operation på varje element. </p><dl class="section see"><dt>Se även</dt><dd>enum <a class="el" href="tree_8h.html#a9f4e8630516f3da89537313b4c828759" title="Specificerar en traverseringordning. ">order</a> </dd>
+<dd>
+<a class="el" href="tree_8h.html#a9e54f1284e25a3766511292f740cfdf6" title="Signaturen för funktioner som skickas som argument till tree_traversal. ">apply_f</a></dd></dl>
+<dl class="params"><dt>Parametrar</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">order</td><td>traverseringsordningen </td></tr>
+    <tr><td class="paramname">tree</td><td>trädet </td></tr>
+    <tr><td class="paramname">operation</td><td>operationen som skall utföras på varje element </td></tr>
+    <tr><td class="paramname">argument</td><td>till varje operation (skickas som första argument till apply_f-funktionen om != NULL) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Här är anropnings diagrammet för den här funktionen:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree_8c_a5d8936e5b6a90176fd35f7999a1820b8_cgraph.png" border="0" usemap="#tree_8c_a5d8936e5b6a90176fd35f7999a1820b8_cgraph" alt=""/></div>
+<map name="tree_8c_a5d8936e5b6a90176fd35f7999a1820b8_cgraph" id="tree_8c_a5d8936e5b6a90176fd35f7999a1820b8_cgraph">
+<area shape="rect" id="node2" href="node_8c.html#a54482a8cdcd1d716d098fb8e759e5a56" title="Traverserar subträdet. " alt="" coords="156,29,266,55"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_70093cb3a9d1f8840af4e997fde867c3.html">tree</a></li><li class="navelem"><a class="el" href="tree_8c.html">tree.c</a></li>
+    <li class="footer">Skapad Mån 13 Oct 2014 17:17:58 för Livekodning 2014-10-09 IOOPM av
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

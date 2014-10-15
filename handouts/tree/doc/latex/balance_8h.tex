@@ -1,0 +1,86 @@
+\hypertarget{balance_8h}{\section{tree/balance.h filreferens}
+\label{balance_8h}\index{tree/balance.\+h@{tree/balance.\+h}}
+}
+{\ttfamily \#include \char`\"{}node.\+h\char`\"{}}\\*
+Include-\/beroendediagram för balance.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{balance_8h__incl}
+\end{center}
+\end{figure}
+Den här grafen visar vilka filer som direkt eller indirekt inkluderar denna filen.
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{balance_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Funktioner}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance} \hyperlink{balance_8h_adf0f756ba133afb0ede202ea2d39385e}{balance\+\_\+check} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Kontrollerar hur välbalanserat ett subträd är. \end{DoxyCompactList}\item 
+void \hyperlink{balance_8h_acaf035612109b377e873e7714fc61c1b}{balance\+\_\+subtree} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$$\ast$ns\mbox{[}$\,$\mbox{]}, uint32\+\_\+t ns\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation över funktioner}
+\hypertarget{balance_8h_adf0f756ba133afb0ede202ea2d39385e}{\index{balance.\+h@{balance.\+h}!balance\+\_\+check@{balance\+\_\+check}}
+\index{balance\+\_\+check@{balance\+\_\+check}!balance.\+h@{balance.\+h}}
+\subsubsection[{balance\+\_\+check}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf balance} balance\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8h_adf0f756ba133afb0ede202ea2d39385e}
+
+
+Kontrollerar hur välbalanserat ett subträd är. 
+
+\begin{DoxySeeAlso}{Se även}
+enum \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance} 
+\end{DoxySeeAlso}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{balance_8h_adf0f756ba133afb0ede202ea2d39385e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8h_adf0f756ba133afb0ede202ea2d39385e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8h_acaf035612109b377e873e7714fc61c1b}{\index{balance.\+h@{balance.\+h}!balance\+\_\+subtree@{balance\+\_\+subtree}}
+\index{balance\+\_\+subtree@{balance\+\_\+subtree}!balance.\+h@{balance.\+h}}
+\subsubsection[{balance\+\_\+subtree}]{\setlength{\rightskip}{0pt plus 5cm}void balance\+\_\+subtree (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$$\ast$}]{ns\mbox{[}$\,$\mbox{]}, }
+\item[{uint32\+\_\+t}]{ns\+\_\+size}
+\end{DoxyParamCaption}
+)}}\label{balance_8h_acaf035612109b377e873e7714fc61c1b}
+Utför 0 till {\ttfamily ns\+\_\+size} ombalanseringar av subträd rotade i {\ttfamily $\ast$ns\mbox{[}0..ns\+\_\+size-\/1\mbox{]}}.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em ns} & en array av pekare till pekare till noder (se exempel) \\
+\hline
+{\em ns\+\_\+size} & storleken på {\ttfamily ns}\\
+\hline
+\end{DoxyParams}
+Låt {\ttfamily ns == \mbox{[}p1, p2, p3\mbox{]}} när {\ttfamily ns\+\_\+size == 3}. Då skall gälla att antingen {\ttfamily \&(($\ast$p1)-\/$>$left) == p2} eller {\ttfamily \&(($\ast$p1)-\/$>$right == p2)}, och antingen {\ttfamily \&(($\ast$p2)-\/$>$left) == p3} eller {\ttfamily \&(($\ast$p2)-\/$>$right == p3)}. 
