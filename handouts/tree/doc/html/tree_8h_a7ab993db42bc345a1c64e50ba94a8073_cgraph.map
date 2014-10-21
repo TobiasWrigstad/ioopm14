@@ -1,0 +1,4 @@
+<map id="tree_delete" name="tree_delete">
+<area shape="rect" id="node2" href="$node_8c.html#a54482a8cdcd1d716d098fb8e759e5a56" title="Traverserar subträdet. " alt="" coords="141,29,251,55"/>
+<area shape="rect" id="node3" href="$node_8c.html#ae1d068c29b1634d5d867c9837fc666d5" title="Tar bort en nod ur minnet och returnerar en pekare till dess element. " alt="" coords="149,79,244,104"/>
+</map>

@@ -1,0 +1,230 @@
+\hypertarget{node_8c}{\section{tree/node.c filreferens}
+\label{node_8c}\index{tree/node.\+c@{tree/node.\+c}}
+}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}balance.\+h\char`\"{}}\\*
+Include-\/beroendediagram för node.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{node_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definitioner}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{node_8c_a1862ef0c9ccba20e371c3e720bbff500}{Call}(f, a1, a2)~do \{ if (a1) f(a1,a2); else f(a2,N\+U\+L\+L); \} while(0)
+\item 
+\#define \hyperlink{node_8c_a61555d5d1e996c64b8e49fc367660ccf}{Val\+\_\+or\+\_\+whole}(n, i)~((i) ? n \+: n-\/$>$value)
+\end{DoxyCompactItemize}
+\subsection*{Funktioner}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$ \hyperlink{node_8c_a51b804eb853b5938a60dbe0df42b474a}{node\+\_\+new} (void $\ast$k, void $\ast$v)
+\item 
+struct \hyperlink{structkey__value}{key\+\_\+value} \hyperlink{node_8c_ae1d068c29b1634d5d867c9837fc666d5}{node\+\_\+delete} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Tar bort en nod ur minnet och returnerar en pekare till dess element. \end{DoxyCompactList}\item 
+struct \hyperlink{structkey__value}{key\+\_\+value} \hyperlink{node_8c_a2d121428f77a50dbda46a08eeec930fd}{unlink\+\_\+smallest} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$$\ast$n)
+\item 
+void \hyperlink{node_8c_a9b008ff5bff9290e7d12f61ee6fe0306}{node\+\_\+insert} (\hyperlink{tree_8h_ac9404bce0090a72ec95c26c1fc58e4dd}{cmp\+\_\+f} key\+\_\+cmp, void $\ast$k, void $\ast$v, \hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$$\ast$n, bool \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance})
+\begin{DoxyCompactList}\small\item\em Stoppar in ett nytt element i trädet. \end{DoxyCompactList}\item 
+void \hyperlink{node_8c_a54482a8cdcd1d716d098fb8e759e5a56}{node\+\_\+traversal} (enum \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order} \hyperlink{tree_8h_a9f4e8630516f3da89537313b4c828759}{order}, \hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n, \hyperlink{tree_8h_a9e54f1284e25a3766511292f740cfdf6}{apply\+\_\+f} f, void $\ast$arg, bool whole)
+\begin{DoxyCompactList}\small\item\em Traverserar subträdet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation över definitioner}
+\hypertarget{node_8c_a1862ef0c9ccba20e371c3e720bbff500}{\index{node.\+c@{node.\+c}!Call@{Call}}
+\index{Call@{Call}!node.\+c@{node.\+c}}
+\subsubsection[{Call}]{\setlength{\rightskip}{0pt plus 5cm}\#define Call(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{a1, }
+\item[{}]{a2}
+\end{DoxyParamCaption}
+)~do \{ if (a1) f(a1,a2); else f(a2,N\+U\+L\+L); \} while(0)}}\label{node_8c_a1862ef0c9ccba20e371c3e720bbff500}
+\hypertarget{node_8c_a61555d5d1e996c64b8e49fc367660ccf}{\index{node.\+c@{node.\+c}!Val\+\_\+or\+\_\+whole@{Val\+\_\+or\+\_\+whole}}
+\index{Val\+\_\+or\+\_\+whole@{Val\+\_\+or\+\_\+whole}!node.\+c@{node.\+c}}
+\subsubsection[{Val\+\_\+or\+\_\+whole}]{\setlength{\rightskip}{0pt plus 5cm}\#define Val\+\_\+or\+\_\+whole(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~((i) ? n \+: n-\/$>$value)}}\label{node_8c_a61555d5d1e996c64b8e49fc367660ccf}
+
+
+\subsection{Dokumentation över funktioner}
+\hypertarget{node_8c_ae1d068c29b1634d5d867c9837fc666d5}{\index{node.\+c@{node.\+c}!node\+\_\+delete@{node\+\_\+delete}}
+\index{node\+\_\+delete@{node\+\_\+delete}!node.\+c@{node.\+c}}
+\subsubsection[{node\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf key\+\_\+value} node\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{node_8c_ae1d068c29b1634d5d867c9837fc666d5}
+
+
+Tar bort en nod ur minnet och returnerar en pekare till dess element. 
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{node_8c_ae1d068c29b1634d5d867c9837fc666d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{node_8c_a9b008ff5bff9290e7d12f61ee6fe0306}{\index{node.\+c@{node.\+c}!node\+\_\+insert@{node\+\_\+insert}}
+\index{node\+\_\+insert@{node\+\_\+insert}!node.\+c@{node.\+c}}
+\subsubsection[{node\+\_\+insert}]{\setlength{\rightskip}{0pt plus 5cm}void node\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf cmp\+\_\+f}}]{key\+\_\+cmp, }
+\item[{void $\ast$}]{k, }
+\item[{void $\ast$}]{v, }
+\item[{{\bf node\+\_\+s} $\ast$$\ast$}]{n, }
+\item[{bool}]{balance}
+\end{DoxyParamCaption}
+)}}\label{node_8c_a9b008ff5bff9290e7d12f61ee6fe0306}
+
+
+Stoppar in ett nytt element i trädet. 
+
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{node_8c_a9b008ff5bff9290e7d12f61ee6fe0306_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{node_8c_a9b008ff5bff9290e7d12f61ee6fe0306_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{node_8c_a51b804eb853b5938a60dbe0df42b474a}{\index{node.\+c@{node.\+c}!node\+\_\+new@{node\+\_\+new}}
+\index{node\+\_\+new@{node\+\_\+new}!node.\+c@{node.\+c}}
+\subsubsection[{node\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+\_\+s}$\ast$ node\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{k, }
+\item[{void $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{node_8c_a51b804eb853b5938a60dbe0df42b474a}
+Skapar en ny nod.
+
+
+\begin{DoxyParams}{Parametrar}
+{\em el} & elementet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returnerar}
+en pekare till en ny nod som allokerats på heapen 
+\end{DoxyReturn}
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{node_8c_a51b804eb853b5938a60dbe0df42b474a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{node_8c_a54482a8cdcd1d716d098fb8e759e5a56}{\index{node.\+c@{node.\+c}!node\+\_\+traversal@{node\+\_\+traversal}}
+\index{node\+\_\+traversal@{node\+\_\+traversal}!node.\+c@{node.\+c}}
+\subsubsection[{node\+\_\+traversal}]{\setlength{\rightskip}{0pt plus 5cm}void node\+\_\+traversal (
+\begin{DoxyParamCaption}
+\item[{enum {\bf order}}]{order, }
+\item[{{\bf node\+\_\+s} $\ast$}]{n, }
+\item[{{\bf apply\+\_\+f}}]{f, }
+\item[{void $\ast$}]{arg, }
+\item[{bool}]{called\+\_\+internally}
+\end{DoxyParamCaption}
+)}}\label{node_8c_a54482a8cdcd1d716d098fb8e759e5a56}
+
+
+Traverserar subträdet. 
+
+\begin{DoxySeeAlso}{Se även}
+\hyperlink{tree_8h_adc1ae204ca89e92d85d8b05878708e72}{tree\+\_\+traversal} 
+\end{DoxySeeAlso}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{node_8c_a54482a8cdcd1d716d098fb8e759e5a56_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{node_8c_a54482a8cdcd1d716d098fb8e759e5a56_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{node_8c_a2d121428f77a50dbda46a08eeec930fd}{\index{node.\+c@{node.\+c}!unlink\+\_\+smallest@{unlink\+\_\+smallest}}
+\index{unlink\+\_\+smallest@{unlink\+\_\+smallest}!node.\+c@{node.\+c}}
+\subsubsection[{unlink\+\_\+smallest}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf key\+\_\+value} unlink\+\_\+smallest (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$$\ast$}]{n\+\_\+field}
+\end{DoxyParamCaption}
+)}}\label{node_8c_a2d121428f77a50dbda46a08eeec930fd}
+Tar bort den minsta lövnoden i trädet och returnerar en pekare till dess element. 
+\begin{DoxyParams}{Parametrar}
+{\em n\+\_\+field} & en pekare till föräldranodens höger/vänster-\/post \\
+\hline
+\end{DoxyParams}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{node_8c_a2d121428f77a50dbda46a08eeec930fd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{node_8c_a2d121428f77a50dbda46a08eeec930fd_icgraph}
+\end{center}
+\end{figure}
+
+

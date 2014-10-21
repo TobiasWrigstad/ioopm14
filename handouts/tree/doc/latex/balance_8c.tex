@@ -1,0 +1,212 @@
+\hypertarget{balance_8c}{\section{tree/balance.c filreferens}
+\label{balance_8c}\index{tree/balance.\+c@{tree/balance.\+c}}
+}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}balance.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\+h\char`\"{}}\\*
+Include-\/beroendediagram för balance.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{balance_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Egenuppräknande typer}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance} \{ \\*
+\hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcae08ac5ba637bc42d8e480e5d70337a89}{B\+A\+L\+A\+N\+C\+E\+D}, 
+\hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca5c6ec9e8eb3d749c847feba2008c0d51}{L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}, 
+\hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcad0767e89e28375ca9044e1c3d313331b}{L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}, 
+\hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca599662d20189f9cd96ff2e1f5bd48816}{R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}, 
+\\*
+\hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca7881fb0f0738fb8dda2f277cd6a60ddc}{R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Funktioner}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$ \hyperlink{balance_8c_a499050d5573d5070a0973a56dac79315}{rotate\+\_\+left} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\item 
+\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$ \hyperlink{balance_8c_a536da07b68b69d0131501f54ec2def6a}{flip\+\_\+left} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\item 
+\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$ \hyperlink{balance_8c_a55c8417a5335da0856e7f5b1feaa636f}{rotate\+\_\+right} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\item 
+\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$ \hyperlink{balance_8c_a6361650730a57c352dd71a4ba360fd87}{flip\+\_\+right} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\item 
+enum \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance} \hyperlink{balance_8c_adf0f756ba133afb0ede202ea2d39385e}{balance\+\_\+check} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Kontrollerar hur välbalanserat ett subträd är. \end{DoxyCompactList}\item 
+void \hyperlink{balance_8c_a2689da611315fb6d26133997568c32e3}{balance\+\_\+subtree} (\hyperlink{node_8h_aeed67813c57d1b99aba54f16aa01639f}{node\+\_\+s} $\ast$$\ast$$\ast$ns, uint32\+\_\+t ns\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentation över egenuppräknande typer}
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{\index{balance.\+c@{balance.\+c}!balance@{balance}}
+\index{balance@{balance}!balance.\+c@{balance.\+c}}
+\subsubsection[{balance}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf balance}}}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}
+\begin{Desc}
+\item[Egenuppräknade typers värden]\par
+\begin{description}
+\index{B\+A\+L\+A\+N\+C\+E\+D@{B\+A\+L\+A\+N\+C\+E\+D}!balance.\+c@{balance.\+c}}\index{balance.\+c@{balance.\+c}!B\+A\+L\+A\+N\+C\+E\+D@{B\+A\+L\+A\+N\+C\+E\+D}}\item[{\em 
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcae08ac5ba637bc42d8e480e5d70337a89}{B\+A\+L\+A\+N\+C\+E\+D}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcae08ac5ba637bc42d8e480e5d70337a89}
+}]\index{L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y@{L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}!balance.\+c@{balance.\+c}}\index{balance.\+c@{balance.\+c}!L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y@{L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}}\item[{\em 
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca5c6ec9e8eb3d749c847feba2008c0d51}{L\+E\+F\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca5c6ec9e8eb3d749c847feba2008c0d51}
+}]\index{L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y@{L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}!balance.\+c@{balance.\+c}}\index{balance.\+c@{balance.\+c}!L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y@{L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}}\item[{\em 
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcad0767e89e28375ca9044e1c3d313331b}{L\+E\+F\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dcad0767e89e28375ca9044e1c3d313331b}
+}]\index{R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y@{R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}!balance.\+c@{balance.\+c}}\index{balance.\+c@{balance.\+c}!R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y@{R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}}\item[{\em 
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca599662d20189f9cd96ff2e1f5bd48816}{R\+I\+G\+H\+T\+\_\+\+L\+E\+F\+T\+\_\+\+H\+E\+A\+V\+Y}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca599662d20189f9cd96ff2e1f5bd48816}
+}]\index{R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y@{R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}!balance.\+c@{balance.\+c}}\index{balance.\+c@{balance.\+c}!R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y@{R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}}\item[{\em 
+\hypertarget{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca7881fb0f0738fb8dda2f277cd6a60ddc}{R\+I\+G\+H\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+H\+E\+A\+V\+Y}\label{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dca7881fb0f0738fb8dda2f277cd6a60ddc}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Dokumentation över funktioner}
+\hypertarget{balance_8c_adf0f756ba133afb0ede202ea2d39385e}{\index{balance.\+c@{balance.\+c}!balance\+\_\+check@{balance\+\_\+check}}
+\index{balance\+\_\+check@{balance\+\_\+check}!balance.\+c@{balance.\+c}}
+\subsubsection[{balance\+\_\+check}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf balance} balance\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_adf0f756ba133afb0ede202ea2d39385e}
+
+
+Kontrollerar hur välbalanserat ett subträd är. 
+
+\begin{DoxySeeAlso}{Se även}
+enum \hyperlink{balance_8c_a1e7ef09ce66d09456a55c47a8c42f3dc}{balance} 
+\end{DoxySeeAlso}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{balance_8c_adf0f756ba133afb0ede202ea2d39385e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_adf0f756ba133afb0ede202ea2d39385e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8c_a2689da611315fb6d26133997568c32e3}{\index{balance.\+c@{balance.\+c}!balance\+\_\+subtree@{balance\+\_\+subtree}}
+\index{balance\+\_\+subtree@{balance\+\_\+subtree}!balance.\+c@{balance.\+c}}
+\subsubsection[{balance\+\_\+subtree}]{\setlength{\rightskip}{0pt plus 5cm}void balance\+\_\+subtree (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$$\ast$$\ast$}]{ns, }
+\item[{uint32\+\_\+t}]{ns\+\_\+size}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_a2689da611315fb6d26133997568c32e3}
+
+
+Här är anropnings diagrammet för den här funktionen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a2689da611315fb6d26133997568c32e3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a2689da611315fb6d26133997568c32e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8c_a536da07b68b69d0131501f54ec2def6a}{\index{balance.\+c@{balance.\+c}!flip\+\_\+left@{flip\+\_\+left}}
+\index{flip\+\_\+left@{flip\+\_\+left}!balance.\+c@{balance.\+c}}
+\subsubsection[{flip\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+\_\+s} $\ast$ flip\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_a536da07b68b69d0131501f54ec2def6a}
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a536da07b68b69d0131501f54ec2def6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8c_a6361650730a57c352dd71a4ba360fd87}{\index{balance.\+c@{balance.\+c}!flip\+\_\+right@{flip\+\_\+right}}
+\index{flip\+\_\+right@{flip\+\_\+right}!balance.\+c@{balance.\+c}}
+\subsubsection[{flip\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+\_\+s} $\ast$ flip\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_a6361650730a57c352dd71a4ba360fd87}
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a6361650730a57c352dd71a4ba360fd87_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8c_a499050d5573d5070a0973a56dac79315}{\index{balance.\+c@{balance.\+c}!rotate\+\_\+left@{rotate\+\_\+left}}
+\index{rotate\+\_\+left@{rotate\+\_\+left}!balance.\+c@{balance.\+c}}
+\subsubsection[{rotate\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+\_\+s} $\ast$ rotate\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_a499050d5573d5070a0973a56dac79315}
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a499050d5573d5070a0973a56dac79315_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{balance_8c_a55c8417a5335da0856e7f5b1feaa636f}{\index{balance.\+c@{balance.\+c}!rotate\+\_\+right@{rotate\+\_\+right}}
+\index{rotate\+\_\+right@{rotate\+\_\+right}!balance.\+c@{balance.\+c}}
+\subsubsection[{rotate\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+\_\+s} $\ast$ rotate\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+s} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{balance_8c_a55c8417a5335da0856e7f5b1feaa636f}
+
+
+Här är katalog-\/grafen för denna funktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{balance_8c_a55c8417a5335da0856e7f5b1feaa636f_icgraph}
+\end{center}
+\end{figure}
+
+
