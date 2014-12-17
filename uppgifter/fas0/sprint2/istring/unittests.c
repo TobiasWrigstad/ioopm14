@@ -1,5 +1,5 @@
 #include <string.h>
-#include "CUnit/Basic.h"
+#include <CUnit/Basic.h>
 #include "istring.h"
 #include "istring_rep.h"
 #include <stdlib.h>
@@ -64,8 +64,11 @@ void testISTRLEN(void)
 void testISTRING_TO_STRING(void)
 {
   char *str1 = istring_mk("spam");
-  CU_ASSERT(strcmp(istring_to_string(str1), "spam") == 0);
+  char *str2 = NULL;
+  str2 = istring_to_string(str1);
+  CU_ASSERT(strcmp(str2, "spam") == 0);
   istring_rm(str1);
+  if (str2 != NULL) free(str2);
 }
 
 
